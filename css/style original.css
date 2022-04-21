@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"lato", sans-serif;
+    text-decoration: none;
+}
+
+#grid-area-body{
+    display: grid;
+    grid-template-areas: 
+    "cabeza"
+    "principal"
+    "pie";
+} 
+    header{
+        grid-area: cabeza;
+    }
+    main{
+        grid-area: principal;
+    }
+    footer{
+        grid-area: pie;
+    }
+
+.logo{
+    
+    width: 150px;
+    height: 100px;
+}
+
+.logo-image{
+    width: 150px;
+    height: 100px;
+    
+}
+
+.titulo{
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.85);
+}
+
+nav a{
+    text-decoration: none;
+    color: #6d6d6d;
+    display: block;
+    padding: 0px 20px;
+    transition: all 500ms ease;
+}
+
+nav a:hover{
+    background: #1572A1;
+    color: #fff;
+}
+
+label{
+    font-size: 40px;/*-------------------------------------------------------*/
+}
+
+nav ul{
+    padding: 0;
+    list-style: none;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+}
+
+nav li{
+    position: relative;
+    line-height: 3rem;
+}
+
+nav li ul{
+    position: absolute;
+}
+
+nav ul ul ul{
+    display: none;
+}
+
+nav li ul{
+    display: none;
+}
+
+nav li:hover > ul{
+    display: block;
+}
+
+/*ITEMS*/
+
+nav > ul{
+    background: #fff;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    flex: auto;
+}
+
+nav > ul > li{
+    float: left;
+}
+
+/* SUB-ITEMS*/
+
+nav li li{
+    background: #fff;
+    
+}
+
+nav > ul > li > ul{
+    top: 100%;
+}
+
+/* SUB-submenu*/
+
+nav ul ul ul{
+    left: 100%;
+    top: 0;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+/*------publicidad-------*/
+
+.about{
+    width: 100vw;
+}
+
+.about-nvidia{
+    display: flex;
+    height: 50%;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.about-nvidia:hover{
+    display: flex;
+    height: 50%;
+    position: relative;
+    transform: translateY(-15px);
+    box-shadow: 0px 12px 16px rgba(0,0,0,0.2);
+}
+
+.about-amd{
+    display: flex;
+    height: 50%;
+    position: relative;
+    transition: all 0.25s ease;
+
+}
+
+.about-amd:hover{
+    display: flex;
+    height: 50%;
+    position: relative;
+    transform: translateY(-15px);
+    box-shadow: 0px 12px 16px rgba(0,0,0,0.2);
+}
+.about h2{
+    text-align: left;
+    padding: 0%;
+    margin: 0%;
+}
+
+/*-----------contacto------------*//*------------nosotros-----------*//*-----------Q&A------------*/
+main h1{
+    padding: 5%;
+    text-align: center;
+}
+
+/*--------------Q&A--------------*/
+.qanda-container{
+    width: 100vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1%;
+    margin: auto;
+}
+
+.qanda-container h2{
+    margin-bottom: 1%;
+    margin-top: 1%;
+    padding: 0%;
+}
+/*---------producto----------*/
+.product-container{
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    background-color: white;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+
+.product-container h3{
+    font-size: large;
+}
+
+.product-container:hover{
+    box-shadow: 16px 16px 16px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.product-title{
+    font-weight: lighter;
+}
+
+.product-photo{
+    width: 100%;
+    object-fit: cover;
+}
+
+main h2{
+    text-align: center;
+    padding: 5%;
+}
+
+/*-------footer--------*/
+footer h5{
+    font-size: medium;
+}
+
+/*---------menu responsive----------*/
+
+@media screen and (max-width: 480px){
+
+    /*-------logo-------*/
+    .logo{
+        float: left;
+        width: 140px;
+        height: 80px;
+    }
+    
+    .logo-image{
+        width: 140px;
+        height: 80px;
+        float: left;
+    }
+    /*-------header-------*/
+    .header{
+        height: 150px;
+    }
+
+    .header label{
+        display: block;
+    }
+
+
+    /*------publicidad-------*/
+    .about-amd{
+        display: flex;
+        margin-left: 1%;
+        margin-right: 1%;
+        height: 50%;
+        position: relative;
+    }
+
+    .about-nvidia{
+        display: flex;
+        margin-left: 1%;
+        margin-right: 1%;
+        height: 50%;
+        position: relative;
+    }   
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    /*-----logo------*/
+    .logo{
+        float: left;
+        width: 140px;
+        height: 80px;
+    }
+    
+    .logo-image{
+        width: 140px;
+        height: 80px;
+        float: left;
+    }
+
+    /*------header------*/
+    .header{
+        height: 150px;
+    }
+
+    /*-----menu tablet------*/
+    nav > ul{
+        background: #fff;
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        flex: auto;
+        font-size: 63%;
+    }
+
+    /*------publicidad-------*/
+    .about-amd{
+        display: flex;
+        margin-left: 1%;
+        margin-right: 1%;
+        height: 50%;
+        position: relative;
+    }
+
+    .about-nvidia{
+        display: flex;
+        margin-left: 1%;
+        margin-right: 1%;
+        height: 50%;
+        position: relative;
+    }
+}
+
